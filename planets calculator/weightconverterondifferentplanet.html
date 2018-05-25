@@ -1,0 +1,304 @@
+<html>
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<style>
+    body{
+        background-image: url(space2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #persondiv{
+/*        border: solid 1px;*/
+        height: 250px;
+        width: 1364px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    #personimage{
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        left: 200px;
+        top: 20px;
+    }
+    #enterweightHead{
+        position: absolute;
+        top: 100px;
+        left: 420px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px; 
+        color: white;
+    }
+    #inputTextBox{
+        position: absolute;
+        top: 160px;
+        left: 420px;
+        border-color: deepskyblue;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        width: 205px;
+    }
+    #calculatebutton{
+        position: absolute;
+        top: 160px;
+        left: 630px;
+    }
+    #planetsdiv{
+        position: absolute;
+        top: 251px;
+        left: 0px;
+        height: 384px;
+        width: 1364px;
+/*        border: solid 1px red;*/
+    }
+    #mercuryimg{
+        position: absolute;
+        top: 50px;
+        left: 20px;
+        height: 120px;
+        width: 120px;
+    }
+    #venusimg{
+        height: 130px;
+        width: 130px;
+        position: absolute;
+        top: 45px;
+        left: 150px;
+    }
+    #moonimg{
+        height: 110px;
+        width: 110px;
+        position: absolute;
+        top: 55px;
+        left: 290px;
+    }
+    #marsimg{
+        height: 120px;
+        width: 120px;
+        position: absolute;
+        top: 50px;
+        left: 430px;
+    }
+    #jupiterimg{
+        height: 120px;
+        width: 120px;
+        position: absolute;
+        top: 50px;
+        left: 585px;
+    }
+    #saturnimg{
+        height: 120px;
+        width: 170px;
+        position: absolute;
+        top: 50px;
+        left: 720px;
+    }
+    #uranusimg{
+        height: 120px;
+        width: 120px;
+        position: absolute;
+        top: 50px;
+        left: 900px;
+    }
+    #neptuneimg{
+        height: 140px;
+        width: 140px;
+        position: absolute;
+        top: 45px;
+        left: 1030px;
+    }
+    #plutoimg{
+        height: 120px;
+        width: 120px;
+        position: absolute;
+        top: 50px;
+        left: 1180px;
+    }
+    #planetnamesdiv{
+/*        border: solid 1px;*/
+        height: 40px;
+        width: 1363px;
+        position: absolute;
+        top: 200px;
+    }
+    
+    .ansdivname{
+/*        border: solid 1px;*/
+        height: 20px;
+        width: 100px;
+        color: white;
+        position: absolute;
+        font-family: 'Montserrat', sans-serif;
+        top: 0px;
+        padding: 10px;
+        border-radius: 4px;
+        font-weight: bold;
+        text-align: center;
+        font-size: 18px;
+    }
+    #mercury-ansdivname{
+        left: 20px;
+    }
+    #venus-ansdivname{
+        left: 160px;
+    }
+    #moon-ansdivname{
+        left: 290px;
+    }
+    #mars-ansdivname{
+        left: 440px;
+    }
+    #jupiter-ansdivname{
+        left: 600px;
+    }
+    #saturn-ansdivname{
+        left: 750px;
+    }
+    #uranus-ansdivname{
+        left: 910px;
+    }
+    #neptune-ansdivname{
+        left: 1050px;
+    }
+    #pluto-ansdivname{
+        left: 1200px;
+    }
+    
+
+    #opdives{
+/*        border: solid 1px;*/
+        height: 50px;
+        width: 1363px;
+        position: absolute;
+        top: 250px;
+        
+    }
+    
+    
+    .ansdiv{
+        border: solid 1px;
+        border-color: white;
+        color: white;
+        height: 20px;
+        width: 100px;
+        position: absolute;
+        top: 0px;
+        padding: 10px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+    }
+    #mercury-ansdiv{
+        left: 20px;
+    }
+    #venus-ansdiv{
+        left: 160px;
+    }
+    #moon-ansdiv{
+        left: 290px;
+    }
+    #mars-ansdiv{
+        left: 440px;
+    }
+    #jupiter-ansdiv{
+        left: 600px;
+    }
+    #saturn-ansdiv{
+        left: 750px;
+    }
+    #uranus-ansdiv{
+        left: 910px;
+    }
+    #neptune-ansdiv{
+        left: 1050px;
+    }
+    #pluto-ansdiv{
+        left: 1200px;
+    }
+    
+    
+</style>   
+<script>
+    
+    function calc()
+    {
+        var a=document.getElementById("inputTextBox").value;
+//        alert(a);
+        
+        var p1=0.33*a;
+        document.getElementById("mercury-ansdiv").innerHTML=p1.toFixed(2);
+        
+        var p2=4.87*a;
+        document.getElementById("venus-ansdiv").innerHTML=p2.toFixed(2);
+         
+        var p3=0.15*a;
+        document.getElementById("moon-ansdiv").innerHTML=p3.toFixed(2);
+
+        var p4=0.642*a;
+        document.getElementById("mars-ansdiv").innerHTML=p4.toFixed(2);
+        
+        var p5=1900*a;
+        document.getElementById("jupiter-ansdiv").innerHTML=p5.toFixed(2);
+        
+        var p6=568*a;
+        document.getElementById("saturn-ansdiv").innerHTML=p6.toFixed(2);
+        
+        var p7=86.8*a;
+        document.getElementById("uranus-ansdiv").innerHTML=p7.toFixed(2);
+        
+        var p8=102*a;
+        document.getElementById("neptune-ansdiv").innerHTML=p8.toFixed(2);
+        
+        var p9=0.05*a;
+        document.getElementById("pluto-ansdiv").innerHTML=p9.toFixed(2);
+    }
+    
+</script>
+</head>
+    <body>
+    <div id="persondiv">
+        <img id="personimage" src="person.png">  
+        <p id="enterweightHead">Enter Your Weight On Earth</p>
+        <input type="text" id="inputTextBox">
+        <input type="button" value="CALCULATE" id="calculatebutton" onclick="calc()">
+    </div>
+    <div id="planetsdiv">
+          <img src="mercury3.png" id="mercuryimg" alt="mercury">
+          <img src="venus.png" id="venusimg">
+          <img src="moon.png" id="moonimg">
+          <img src="Mars.png" id="marsimg">
+          <img src="Jupiter.png" id="jupiterimg">
+          <img src="saturn.png" id="saturnimg">
+          <img src="uranus.png" id="uranusimg">
+          <img src="neptune.png" id="neptuneimg">
+          <img src="pluto.png" id="plutoimg">
+
+        <div id="planetnamesdiv">
+              <div id="mercury-ansdivname" class="ansdivname">Mercury</div>
+            <div id="venus-ansdivname" class="ansdivname">Venus</div>
+            <div id="moon-ansdivname" class="ansdivname">Moon</div>
+            <div id="mars-ansdivname" class="ansdivname">Mars</div>
+            <div id="jupiter-ansdivname" class="ansdivname">Jupiter</div>
+            <div id="saturn-ansdivname" class="ansdivname">Saturn</div>
+            <div id="uranus-ansdivname" class="ansdivname">uranus</div>
+            <div id="neptune-ansdivname" class="ansdivname">Neptune</div>
+            <div id="pluto-ansdivname" class="ansdivname">pluto</div>  
+        </div>
+
+        <div id="opdives">
+            <div id="mercury-ansdiv" class="ansdiv"></div>
+            <div id="venus-ansdiv" class="ansdiv"></div>
+            <div id="moon-ansdiv" class="ansdiv"></div>
+            <div id="mars-ansdiv" class="ansdiv"></div>
+            <div id="jupiter-ansdiv" class="ansdiv"></div>
+            <div id="saturn-ansdiv" class="ansdiv"></div>
+            <div id="uranus-ansdiv" class="ansdiv"></div>
+            <div id="neptune-ansdiv" class="ansdiv"></div>
+            <div id="pluto-ansdiv" class="ansdiv"></div>
+        </div>
+    </div>
+    </body>
+</html>
